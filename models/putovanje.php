@@ -13,8 +13,12 @@ class Putovanje
 
     function vratiSvaPutovanja()
     {
-        require 'dbconnection.php';
-
+        $hostname = "localhost";
+        $username = "root";
+        $password = "";
+        $baza = "agencija";
+        $connection = new mysqli($hostname, $username, $password, $baza) or die("Connect failed: %s\n" . $connection->error);
+        
         $sql = "SELECT * FROM putovanje";
         $rs = $connection->query($sql);
         $putovanja = array();

@@ -42,18 +42,52 @@
                 <div class="form">
                     <label class="form-label">Putovanje</label>
                     <select type="text" class="form-select">
+                    <?php
+                        require 'models/putovanje.php';
+
+                        $putovanje = new Putovanje();
+                        $putovanja = $putovanje->vratiSvaPutovanja();
+
+                        foreach ($putovanja as $p) {
+                        ?>
+                            <option value="<?php echo $p->id ?>"><?php echo $p->naziv ?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                 </div>
 
                 <div class="form">
                     <label class="form-label">Autobus</label>
                     <select type="text" class="form-select">
+                    <?php
+                        include 'models/bus.php';
+                        $bus = new Bus();
+                        $busevi = $bus->vratiSveBuseve();
+
+                        foreach ($busevi as $b) {
+                        ?>
+                            <option value="<?php echo $b->id ?>"><?php echo $b->regtablice ?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                 </div>
 
                 <div class="form">
                     <label class="form-label">Vodič</label>
                     <select type="text" class="form-select">
+  			            <?php
+                        include 'models/vodic.php';
+                        $vodic = new Vodic();
+                        $vodici = $vodic->vratiSveVodice();
+
+                        foreach ($vodici as $v) {
+                        ?>
+                            <option value="<?php echo $v->id ?>"><?php echo $v->imeprezime ?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                 </div>
 
