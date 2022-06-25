@@ -22,17 +22,17 @@
 
                 <div class="form">
                     <label class="form-label">Ime i prezime</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="imeprezime">
                 </div>
 
                 <div class="form">
                     <label class="form-label">Broj telefona</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="brojtelefona">
                 </div>
 
                 <div class="form">
                     <label class="form-label">Broj rezervacije</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" id="brojrezervacije">
                 </div>
 
             </div>
@@ -41,7 +41,7 @@
 
                 <div class="form">
                     <label class="form-label">Putovanje</label>
-                    <select type="text" class="form-select">
+                    <select type="text" class="form-select" id="putovanje_id">
                     <?php
                         require 'models/putovanje.php';
 
@@ -59,7 +59,7 @@
 
                 <div class="form">
                     <label class="form-label">Autobus</label>
-                    <select type="text" class="form-select">
+                    <select type="text" class="form-select" id="bus_id">
                     <?php
                         include 'models/bus.php';
                         $bus = new Bus();
@@ -76,7 +76,7 @@
 
                 <div class="form">
                     <label class="form-label">Vodič</label>
-                    <select type="text" class="form-select">
+                    <select type="text" class="form-select" id="vodic_id">
   			            <?php
                         include 'models/vodic.php';
                         $vodic = new Vodic();
@@ -100,8 +100,8 @@
 
     </div>
 
-
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/index.js"></script>
 
 </body>
 
