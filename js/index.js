@@ -1,6 +1,6 @@
 $(function () {
-    funkcija();
     popuniTabelu();
+    funkcija();
     $('#azurirajbutton').hide();
 });
 
@@ -106,45 +106,18 @@ function funkcija(){
 
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
 function popuniTabelu(){
+
 
     $.ajax({
         url: 'dbfunctions/vratiPutnike.php',
         
         success: function (rez){
             $('#tblbody').html(rez);
+            $('#tblputnici').DataTable();
         }
     })
 }
