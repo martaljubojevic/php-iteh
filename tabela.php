@@ -10,6 +10,7 @@
             <th>Putovanje</th>
             <th>Bus</th>
             <th>Vodič</th>
+            <th>OBRIŠI</th>
         </tr>
     </thead>
 

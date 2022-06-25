@@ -30,6 +30,56 @@ function funkcija(){
 
     })
 
+
+
+
+    $(document).on('click', '#obrisibutton', function(){
+
+        $.ajax({
+            url: 'dbfunctions/obrisiputnika.php',
+            method: 'post',
+            data: {
+                ID: $(this).attr('value')
+            },
+
+            success: function (){
+                popuniTabelu();     
+            }
+        })
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

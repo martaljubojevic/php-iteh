@@ -24,7 +24,7 @@ while($putnik = $putnici->fetch_object()){
         <td><?php echo $putnik->naziv ?></td>
         <td><?php echo $putnik->regtablice ?></td>
         <td><?php echo $putnik->vip ?></td>
-
+        <td><button class="btn btn-primary" id="obrisibutton" value="<?php echo $putnik->id ?>">OBRIŠI</button></td>
     </tr>
 <?php
 }
