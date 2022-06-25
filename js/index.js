@@ -1,6 +1,7 @@
 $(function () {
     funkcija();
     popuniTabelu();
+    $('#azurirajbutton').hide();
 });
 
 
@@ -53,6 +54,9 @@ function funkcija(){
 
     $(document).on('click', '#izmenabutton', function(){
 
+        $('#dodajbutton').hide();
+        $('#azurirajbutton').show();
+
         $.ajax({
             url: 'dbfunctions/vratiPutnika.php',
             method: 'post',
@@ -76,6 +80,31 @@ function funkcija(){
     })
 
 
+
+    $(document).on('click', '#azurirajbutton', function(){
+
+        $.ajax({
+            url: 'dbfunctions/azurirajPutnika.php',
+            method: 'post',
+            data: {
+                IMEPREZIME: $('#imeprezime').val(),
+                BROJTELEFONA: $('#brojtelefona').val(),
+                BROJREZERVACIJE: $('#brojrezervacije').val(),
+                PUTOVANJE_ID: $('#putovanje_id').val(),
+                BUS_ID: $('#bus_id').val(),
+                VODIC_ID: $('#vodic_id').val(),
+                ID: $('#putnikid').val()
+
+            },
+
+            success: function (){
+                $('#dodajbutton').show();
+                $('#azurirajbutton').hide();
+                popuniTabelu();
+            }
+        })
+
+    })
 
 
 

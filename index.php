@@ -96,6 +96,9 @@
         </div>
 
         <button class="btn btn-secondary" id="dodajbutton">DODAJ PUTNIKA</button>
+        <br>
+        <button class="btn btn-secondary" id="azurirajbutton">AŽURIRAJ PUTNIKA</button>
+
         
         <label id="putnikid"></label>
 
