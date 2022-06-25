@@ -11,6 +11,7 @@
             <th>Bus</th>
             <th>Vodič</th>
             <th>OBRIŠI</th>
+            <th>IZMENA</th>
         </tr>
     </thead>
 

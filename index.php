@@ -96,7 +96,8 @@
         </div>
 
         <button class="btn btn-secondary" id="dodajbutton">DODAJ PUTNIKA</button>
-
+        
+        <label id="putnikid"></label>
 
         <?php
 

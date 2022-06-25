@@ -51,6 +51,32 @@ function funkcija(){
 
 
 
+    $(document).on('click', '#izmenabutton', function(){
+
+        $.ajax({
+            url: 'dbfunctions/vratiPutnika.php',
+            method: 'post',
+            data: {
+                ID: $(this).attr('value')
+            },
+            dataType: 'json',
+
+
+            success: function (putnik){
+                $('#imeprezime').val(putnik.imeprezime);
+                $('#brojtelefona').val(putnik.brojtelefona);
+                $('#brojrezervacije').val(putnik.brojrezervacije);
+                $('#putovanje_id').val(putnik.putovanje_id);
+                $('#bus_id').val(putnik.bus_id);
+                $('#vodic_id').val(putnik.vodic_id);
+                $('#putnikid').val(putnik.id)
+            }
+        })
+
+    })
+
+
+
 
 
 
