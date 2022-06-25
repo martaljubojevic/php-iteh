@@ -1,5 +1,6 @@
 $(function () {
     funkcija();
+    popuniTabelu();
 });
 
 
@@ -21,8 +22,24 @@ function funkcija(){
             data: {IMEPREZIME: imeprezime, BROJTELEFONA: brojtelefona, BROJREZERVACIJE: brojrezervacije, PUTOVANJE_ID: putovanje_id,
             BUS_ID: bus_id, VODIC_ID:vodic_id
             },
+
+            success: function (){
+                popuniTabelu();     
+            }
         })
 
     })
 
+}
+
+
+function popuniTabelu(){
+
+    $.ajax({
+        url: 'dbfunctions/vratiPutnike.php',
+        
+        success: function (rez){
+            $('#tblbody').html(rez);
+        }
+    })
 }
